@@ -1,6 +1,5 @@
 <template>
-  <div><h1>12312312</h1></div>
-  <ExButton :size="'large'"></ExButton>
+  <ExButton :size="'large'">123</ExButton>
 </template>
 
 

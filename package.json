@@ -4,6 +4,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "npm run clean:dist",
+    "clean:dist": "rimraf dist",
+    "build": " npm run clean && npm run build:dts && npm run build:pkg",
+    "build:dts": "npx vue-tsc -p tsconfig.pkg.json",
+    "build:pkg": "npm run -C build start",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
@@ -27,10 +32,14 @@
   },
   "devDependencies": {
     "@esbuild-kit/cjs-loader": "^2.4.4",
+    "@types/fs-extra": "^11.0.4",
     "@types/gulp": "^4.0.17",
     "@types/node": "^24.0.3",
+    "fs-extra": "^11.3.0",
     "gulp": "^5.0.1",
+    "rimraf": "^6.0.1",
     "vite": "^6.3.5",
-    "vitepress": "^1.6.3"
+    "vitepress": "^1.6.3",
+    "vue-tsc": "^2.2.10"
   }
 }

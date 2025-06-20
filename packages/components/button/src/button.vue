@@ -1,5 +1,7 @@
 <template>
-  <component :is="'button'">{{ props.size }}</component>
+  <component :is="'button'">
+    <slot name="default"></slot>
+  </component>
 </template>
 
 <script lang="ts" setup>
