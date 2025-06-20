@@ -19,5 +19,6 @@
   "include": [
     "packages",
     "typings/env.d.ts"
-  ]
+  ],
+  "exclude":["packages/theme/gulpfile.ts"]
 }
