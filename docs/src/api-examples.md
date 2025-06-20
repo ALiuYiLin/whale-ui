@@ -11,7 +11,6 @@ The main `useData()` API can be used to access site, theme, and page data for th
 ```md
 <script setup>
 import { useData } from 'vitepress'
-
 const { theme, page, frontmatter } = useData()
 </script>
 
@@ -29,6 +28,7 @@ const { theme, page, frontmatter } = useData()
 
 <script setup>
 import { useData } from 'vitepress'
+import ButtonBasic from './examples/button/basic.vue'
 
 const { site, theme, page, frontmatter } = useData()
 </script>
@@ -47,3 +47,5 @@ const { site, theme, page, frontmatter } = useData()
 ## More
 
 Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+## aaa
+<ButtonBasic></ButtonBasic>
