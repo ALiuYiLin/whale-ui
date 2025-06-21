@@ -3,7 +3,7 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
-import '@element-x/theme/src/index.scss'
+import '@whale-ui/theme/src/index.scss'
 
 export default {
   extends: DefaultTheme,

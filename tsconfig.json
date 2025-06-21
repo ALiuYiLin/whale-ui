@@ -9,8 +9,8 @@
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "baseUrl": ".",
     "paths": {
-      "element-x":["packages/element-x"],
-      "@element-x/*":["packages/*"]
+      "whale-ui":["packages/whale-ui"],
+      "@whale-ui/*":["packages/*"]
     }
   },
   "exclude": [

@@ -8,12 +8,12 @@
     "strict": true,                                      /* Enable all strict type-checking options. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "declaration": true,
-    "declarationDir": "dist/element-x/es",
+    "declarationDir": "dist/whale-ui/es",
     "emitDeclarationOnly": true,
     "baseUrl": ".",
     "paths": {
-      "element-x":["packages/element-x"],
-      "@element-x/*":["packages/*"]
+      "whale-ui":["packages/whale-ui"],
+      "@whale-ui/*":["packages/*"]
     }
   },
   "include": [

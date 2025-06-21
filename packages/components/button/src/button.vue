@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@element-x/hooks';
+import { useNamespace } from '@whale-ui/hooks';
 import { buttonProps } from './button';
 import { computed } from 'vue';
 

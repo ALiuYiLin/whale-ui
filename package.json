@@ -1,5 +1,5 @@
 {
-  "name": "element-x",
+  "name": "whale-ui",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,8 @@
     "build:style": "npm run -C packages/theme build",
     "build:dts": "npx vue-tsc -p tsconfig.pkg.json",
     "build:pkg": "npm run -C build start",
+    "version:update":"cd packages/whale-ui && npm version patch",
+    "publish":"cd dist/whale-ui && npm login && npm publish",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"

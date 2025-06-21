@@ -4,8 +4,8 @@ import { copyFile } from "fs/promises";
 import path from "path";
 
 
-const epPackage = path.resolve(__dirname,"../packages/element-x/package.json")
-const epOutput = path.resolve(__dirname,"../dist/element-x")
+const epPackage = path.resolve(__dirname,"../packages/whale-ui/package.json")
+const epOutput = path.resolve(__dirname,"../dist/whale-ui")
 
 export const copyFiles = () => Promise.all([
   copyFile(epPackage,path.join(epOutput,'package.json')),

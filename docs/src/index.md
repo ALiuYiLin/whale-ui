@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "element-x"
+  name: "whale-ui"
   text: "A vue3 components lib"
   tagline: My great project tagline
   actions:

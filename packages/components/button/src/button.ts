@@ -1,4 +1,4 @@
-import { buildProps } from "@element-x/utils";
+import { buildProps } from "@whale-ui/utils";
 
 
 

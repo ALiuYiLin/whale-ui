@@ -12,7 +12,7 @@ import cssnano from 'cssnano'
 import type Vinly from 'vinyl'
 
 
-const epOutput = path.resolve(__dirname,"../../dist/element-x")
+const epOutput = path.resolve(__dirname,"../../dist/whale-ui")
 
 // const distFolder = path.resolve(__dirname, 'dist')
 const distFolder = path.resolve(epOutput, 'theme')

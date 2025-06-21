@@ -3,14 +3,14 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "element-x",
+  title: "whale-ui",
   description: "A vue3 components lib",
   srcDir:'src',
   vite:{
     resolve:{
       alias:{
-        'element-x': resolve(__dirname,"../../packages/element-x"),
-        '@element-x': resolve(__dirname,"../../packages")
+        'whale-ui': resolve(__dirname,"../../packages/whale-ui"),
+        '@whale-ui': resolve(__dirname,"../../packages")
       }
     }
   },

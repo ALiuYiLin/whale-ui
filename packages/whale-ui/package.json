@@ -1,20 +1,20 @@
 {
-  "name": "element-x",
-  "version": "0.0.1",
+  "name": "whale-ui",
+  "version": "0.0.3",
   "description": "all components are settled here",
   "main": "./es/index.mjs",
   "module": "./es/index.mjs",
   "types": "./es/index.d.ts",
   "publishConfig": {
-    "registry": "http://mincase.space:4873/"
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "lodash-es":"^4.17.21"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "minimist": "^1.2.8"
   },
-  "exports":{
+  "exports": {
     ".": {
       "types": "./es/index.d.ts",
       "import": "./es/index.mjs",

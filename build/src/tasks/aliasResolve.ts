@@ -3,9 +3,9 @@ import path from "path"
 import { readFile, writeFile } from "fs/promises"
 import { copy, remove } from "fs-extra"
 
-const epOutput = path.resolve(__dirname,"../../../dist/element-x")
-const PKG_PREFIX = "@element-x"
-const PKG_NAME = "element-x"
+const epOutput = path.resolve(__dirname,"../../../dist/whale-ui")
+const PKG_PREFIX = "@whale-ui"
+const PKG_NAME = "whale-ui"
 
 
 export const pathRewriter = () => {

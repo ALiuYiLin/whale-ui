@@ -8,10 +8,10 @@ import glob from 'fast-glob'
 import alias from '@rollup/plugin-alias'
 import path from "path";
 
-const epRoot = path.resolve(__dirname,"../../../packages/element-x")
+const epRoot = path.resolve(__dirname,"../../../packages/whale-ui")
 const pkgRoot = path.resolve(__dirname,"../../../packages")
 const projRoot = path.resolve(__dirname,"../../..")
-const epOutput = path.resolve(__dirname,"../../../dist/element-x")
+const epOutput = path.resolve(__dirname,"../../../dist/whale-ui")
 
 
 var __defProp = Object.defineProperty;
@@ -35,8 +35,8 @@ export const excludeFiles = (files: string[]) => {
 const plugins: Plugin[] = [
   alias({
     entries:[
-      {find:"element-x",replacement:epRoot},
-      {find:"@element-x",replacement:pkgRoot}
+      {find:"whale-ui",replacement:epRoot},
+      {find:"@whale-ui",replacement:pkgRoot}
     ]
   }),
   vue(),

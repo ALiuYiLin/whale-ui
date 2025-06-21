@@ -1,10 +1,10 @@
 <template>
-  <ExButton :size="'large'">123</ExButton>
+  <WlButton :size="'large'">123</WlButton>
 </template>
 
 
 <script setup lang="ts">
-import { ExButton } from 'element-x';
+import { WlButton } from 'whale-ui';
 
 
 </script>

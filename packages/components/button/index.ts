@@ -3,4 +3,4 @@ import button from "./src/button.vue";
 
 
 
-export const ExButton  = button
+export const WlButton  = button
