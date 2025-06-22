@@ -4,22 +4,24 @@ layout: home
 
 hero:
   name: "whale-ui"
-  text: "A vue3 components lib"
+  text: "一个基于vue3的组件库"
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 指南
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: API参考
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 指南
+    details: 了解设计指南，帮助产品设计人员搭建逻辑清晰、结构合理且高效易用的产品。
+    link: /guide/design
+  - title: 组件
+    details: 使用组件 Demo 快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。
+    link: /components/button
+  - title: 资源
+    details: 下载相关资源，用其快速搭建页面原型或高保真视觉稿，提升产品设计效率。
 ---
 

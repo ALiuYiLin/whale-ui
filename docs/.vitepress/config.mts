@@ -5,7 +5,7 @@ import { mdPlugin } from "./plugins";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "whale-ui",
-  description: "A vue3 components lib",
+  description: "一个基于vue3的组件库",
   srcDir:'src',
   vite:viteConfig,
   markdown:{config:(md)=>mdPlugin(md)},
@@ -24,7 +24,6 @@ export default defineConfig({
         {
           text: "指南",
           items: [
-            { text: "设计", link: "/guide/design" },
             { text: "快速开始", link: "/guide/quick-start" }
           ],
         },
@@ -46,7 +45,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/ALiuYiLin/whale-ui' }
     ]
   }
 })
