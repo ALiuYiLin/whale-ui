@@ -1,0 +1,33 @@
+import{u as r,c as o,o as c,j as a,am as m,a as n,t as e,k as p}from"./chunks/framework.D1DN_cFy.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"api-examples.md","filePath":"api-examples.md"}'),d={name:"api-examples.md"},b=Object.assign(d,{setup(u){const{theme:t,page:l,frontmatter:i}=r();return(g,s)=>(c(),o("div",null,[s[0]||(s[0]=a("h2",{id:"results",tabindex:"-1"},[n("Results "),a("a",{class:"header-anchor",href:"#results","aria-label":'Permalink to "Results"'},"​")],-1)),s[1]||(s[1]=a("h3",{id:"theme-data",tabindex:"-1"},[n("Theme Data "),a("a",{class:"header-anchor",href:"#theme-data","aria-label":'Permalink to "Theme Data"'},"​")],-1)),a("pre",null,e(p(t)),1),s[2]||(s[2]=a("h3",{id:"page-data",tabindex:"-1"},[n("Page Data "),a("a",{class:"header-anchor",href:"#page-data","aria-label":'Permalink to "Page Data"'},"​")],-1)),a("pre",null,e(p(l)),1),s[3]||(s[3]=a("h3",{id:"page-frontmatter",tabindex:"-1"},[n("Page Frontmatter "),a("a",{class:"header-anchor",href:"#page-frontmatter","aria-label":'Permalink to "Page Frontmatter"'},"​")],-1)),a("pre",null,e(p(i)),1),s[4]||(s[4]=m(`<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span></span></span>
+<span class="line"><span>&lt;script setup&gt;</span></span>
+<span class="line"><span>import { useData } from &#39;vitepress&#39;</span></span>
+<span class="line"><span>import ButtonBasic from &#39;./examples/button/basic.vue&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const { site, theme, page, frontmatter } = useData()</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># Runtime API Examples</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>This page demonstrates usage of some of the runtime APIs provided by VitePress.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The main \`useData()\` API can be used to access site, theme, and page data for the current page. It works in both \`.md\` and \`.vue\` files:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>\`\`\`md</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## Results</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### Theme Data</span></span>
+<span class="line"><span>&lt;pre&gt;{{ theme }}&lt;/pre&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### Page Data</span></span>
+<span class="line"><span>&lt;pre&gt;{{ page }}&lt;/pre&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### Page Frontmatter</span></span>
+<span class="line"><span>&lt;pre&gt;{{ frontmatter }}&lt;/pre&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## More</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).</span></span>
+<span class="line"><span>## Test</span></span>
+<span class="line"><span>&lt;ButtonBasic&gt;&lt;/ButtonBasic&gt;</span></span></code></pre></div>`,1))]))}});export{f as __pageData,b as default};

@@ -1,0 +1,1 @@
+import{_ as a,c as s,o,am as c}from"./chunks/framework.D1DN_cFy.js";const _=JSON.parse('{"title":"设计思路","description":"","frontmatter":{},"headers":[],"relativePath":"guide/ideas.md","filePath":"guide/ideas.md"}'),t={name:"guide/ideas.md"};function d(r,e,i,n,p,l){return o(),s("div",null,e[0]||(e[0]=[c("",10)]))}const u=a(t,[["render",d]]);export{_ as __pageData,u as default};
