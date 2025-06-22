@@ -18,7 +18,6 @@ export default defineConfig({
     ],
     footer:{
       message:"联系邮箱: scliuyilin@163.com",
-      copyright:"Copyright © 2025 备案号：<a id='beian' href='https://beian.miit.gov.cn/' target='_blank'>蜀ICP备2025123858号-1</a>"
     },
     sidebar: {     
       "/guide/": [
