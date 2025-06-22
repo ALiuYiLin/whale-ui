@@ -4,6 +4,8 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import '@whale-ui/theme/src/index.scss'
+import VpDemo from '../vitepress/components/vp-demo.vue'
+import 'virtual:svg-icons-register';
 
 export default {
   extends: DefaultTheme,
@@ -14,5 +16,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
+    app.component('Demo',VpDemo)
   }
 } satisfies Theme

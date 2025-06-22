@@ -13,6 +13,8 @@ const props = defineProps(buttonProps)
 const ns = useNamespace('button')
 const buttonKls = computed(() => [
   ns.b(),
-  ns.m(props.size)
+  ns.m(props.size),
+  ns.m(props.type),
+  ns.is('round',props.round)
 ])
 </script>

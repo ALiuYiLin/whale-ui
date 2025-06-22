@@ -137,3 +137,12 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+#beian{
+  text-decoration-line: none;
+}
+html{
+  scrollbar-gutter: stable;
+}
+.vp-doc h2{
+  border-top: 0;
+}
