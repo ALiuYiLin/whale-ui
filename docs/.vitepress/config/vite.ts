@@ -6,7 +6,6 @@ import path, { resolve } from 'path'
 type ViteConfig = Required<UserConfig>['vite']
 
 export const viteConfig:ViteConfig = {
-  base:'/whale-ui/',
   css:{
       preprocessorOptions:{
         scss:{

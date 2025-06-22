@@ -8,6 +8,7 @@ export default defineConfig({
   description: "一个基于vue3的组件库",
   srcDir:'src',
   vite:viteConfig,
+  base:'/whale-ui/',
   markdown:{config:(md)=>mdPlugin(md)},
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
