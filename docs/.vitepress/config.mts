@@ -36,6 +36,7 @@ export default defineConfig({
             { text: "色彩", link: "/components/color" },
             { text: "边框", link: "/components/border" },
             { text: "布局", link: "/components/layout" },
+            { text: "文字提示", link: "/components/tooltip" },
           ]
         }
       ],

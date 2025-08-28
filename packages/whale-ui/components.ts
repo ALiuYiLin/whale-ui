@@ -1,7 +1,7 @@
-import { WlButton,WlRow,WlCol } from "@whale-ui/components";
-
+import { WlButton,WlRow,WlCol,WlTooltip } from "@whale-ui/components";
 export {
   WlButton,
   WlRow,
-  WlCol
+  WlCol,
+  WlTooltip
 }
