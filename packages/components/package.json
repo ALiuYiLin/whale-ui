@@ -1,12 +1,19 @@
 {
-  "name": "@whale-ui/components",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "name": "@wahle-ui/components",
+  "version": "6.0.1",
+  "type": "module",
+  "license": "MIT",
+  "author": "scliuyilin",
+  "description": "The official plugin for Vue SFC support in Vite.",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "vue"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  }
 }
