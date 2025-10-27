@@ -6,6 +6,7 @@
     ".": {
       "import": "./index.js",
       "types": "./index.d.ts"
-    }
+    },
+    "./*": "./*"
   }
 }

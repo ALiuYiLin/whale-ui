@@ -1,9 +1,13 @@
 import { rollup } from "rollup";
-import vue from "rollup-plugin-vue";
+import vue from '@vitejs/plugin-vue'
 import glob from "fast-glob";
 import esbuild from 'rollup-plugin-esbuild'
+import { copyFile } from "fs/promises";
+import scss from 'rollup-plugin-scss';
 
-
+export async function copyFiles() {
+  copyFile('packages/package.json','dist/whale-ui/es/package.json')
+}
 
 export async function buildComponents() {
   const files = await glob("**/*.{js,ts,vue}", {
@@ -14,6 +18,11 @@ export async function buildComponents() {
     input: files,
     plugins: [
       vue(),
+      scss({
+        // outputStyle:'compressed',
+        fileName:'index.css',
+        sourceMap: true
+      }),
       esbuild()
     ],
     external: ["vue"],
@@ -27,4 +36,10 @@ export async function buildComponents() {
     sourcemap: true,
   });
 }
-buildComponents();
+
+export async function buildMain(){
+  await buildComponents()
+  await copyFiles()
+}
+
+buildMain()
