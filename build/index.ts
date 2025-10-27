@@ -7,10 +7,9 @@ import esbuild from 'rollup-plugin-esbuild'
 
 export async function buildComponents() {
   const files = await glob("**/*.{js,ts,vue}", {
-    cwd: "packages/components",
+    cwd: "packages",
     absolute: true
   });
-  console.log('files: ', files);
   const bundle = await rollup({
     input: files,
     plugins: [
@@ -22,7 +21,7 @@ export async function buildComponents() {
   });
   await bundle.write({
     entryFileNames: '[name].js',
-    dir:'packages/components/dist',
+    dir:'dist/whale-ui/es',
     preserveModules: true,
     format: "es",
     sourcemap: true,

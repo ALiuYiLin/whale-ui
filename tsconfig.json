@@ -12,6 +12,7 @@
   },
   "include": [
     "packages/**/*.vue",
+    "packages/**/*.ts",
     "build/**/*.ts"
   ],
   "exclude": [

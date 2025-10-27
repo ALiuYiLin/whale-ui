@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {WlButton} from '@wahle-ui/components'
+import {WlButton} from 'whale-ui'
 </script>
 
 <template>
@@ -8,6 +8,3 @@ import {WlButton} from '@wahle-ui/components'
   </div>
 </template>
 
-<style scoped>
-
-</style>

@@ -2,21 +2,35 @@
   "name": "whale-ui",
   "version": "1.0.0",
   "type": "module",
-  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "scripts": {
+    "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
+    "clean:dist": "rimraf dist",
+    "build:dts": "vue-tsc -p tsconfig.pkg.json",
+    "build:pkg": "tsx build/index.ts",
+    "build": "pnpm run clean && pnpm run build:dts && pnpm run build:pkg"
+  },
   "dependencies": {
     "rollup": "^4.52.5",
     "vue": "^3.5.22"
   },
   "devDependencies": {
     "fast-glob": "^3.3.3",
+    "rimraf": "^6.0.1",
     "rollup-plugin-esbuild": "^6.2.1",
     "rollup-plugin-vue": "^6.0.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.6",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   }
 }
