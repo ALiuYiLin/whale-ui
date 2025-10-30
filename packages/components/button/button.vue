@@ -1,7 +1,31 @@
+<script lang="ts" setup>
+import './styles/soft.scss';
+
+import { computed } from 'vue';
+import { useNamespace } from '@whale-ui/hooks';
+
+
+const props = defineProps({
+  skin: {
+    type: String,
+    default: '',
+  }
+})
+
+const ns = useNamespace('button')
+
+const buttonKls = computed(() => {
+  return [
+    ns.b(),
+    ns.m(props.skin)
+  ]
+})
+
+
+</script>
 <template>
-  <component :is="'button'" class="wl-button">
+  <component :is="'button'" :class="buttonKls">
     <slot></slot>
-    <p>aaa</p>
   </component>
 </template>
 

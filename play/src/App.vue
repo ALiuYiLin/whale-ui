@@ -4,7 +4,7 @@ import {WlButton} from 'whale-ui'
 
 <template>
   <div>
-    <WlButton>11111</WlButton>
+    <WlButton skill="soft">11111</WlButton>
   </div>
 </template>
 
