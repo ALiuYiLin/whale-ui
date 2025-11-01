@@ -10,6 +10,9 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "whale-ui": [
+        "./packages"
+      ],
       "@whale-ui/*": [
         "./packages/*"
       ]  
@@ -18,7 +21,10 @@
   "include": [
     "packages/**/*.vue",
     "packages/**/*.ts",
-    "build/**/*.ts"
+    "build/**/*.ts",
+    "docs/**/*.vue",
+    "docs/**/*.ts",
+    "docs/**/*.mts",
   ],
   "exclude": [
     "node_modules",
