@@ -1,4 +1,4 @@
-import button from './button.vue'
+import button from './src/button.vue'
 
 const WlButton = button
 

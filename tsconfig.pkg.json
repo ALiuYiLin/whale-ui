@@ -3,13 +3,18 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "outDir": "./dist/whale-ui/es",          // JS 文件输出目录
-    "declaration": true,         // 生成声明文件
-    "declarationDir": "./dist/whale-ui/es",   // 声明文件目录
-    "declarationMap": true,      // 生成声明文件的源映射
+    "outDir": "./dist/whale-ui/es", // JS 文件输出目录
+    "declaration": true, // 生成声明文件
+    "declarationDir": "./dist/whale-ui/es", // 声明文件目录
+    "declarationMap": true, // 生成声明文件的源映射
     "emitDeclarationOnly": true, // 同时生成 JS 和声明文件
-    "strict": true,              // 严格模式确保类型准确性
-    "skipLibCheck": true         // 跳过库文件的类型检查
+    "strict": true, // 严格模式确保类型准确性
+    "skipLibCheck": true, // 跳过库文件的类型检查
+    "baseUrl": ".",
+    "paths": {
+      "whale-ui": ["./packages/index.ts"],
+      "@whale-ui/*": ["./packages/*"]
+    }
   },
   "include": ["packages/**/*.ts", "packages/**/*.vue"],
   "exclude": ["node_modules", "dist"]
