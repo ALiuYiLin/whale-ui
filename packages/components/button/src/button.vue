@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import '../styles/index.scss';
+// import '../styles/index.scss';
 
 import { computed } from 'vue';
 import { useNamespace } from '@whale-ui/hooks';

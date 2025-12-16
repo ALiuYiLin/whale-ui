@@ -4,8 +4,12 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./index.js",
-      "types": "./index.d.ts"
+      "import": "./es/index.js",
+      "types": "./es/index.d.ts"
+    },
+    "./es/*": {
+      "import": "./es/*.js",
+      "types": "./es/*.d.ts"
     },
     "./*": "./*"
   }

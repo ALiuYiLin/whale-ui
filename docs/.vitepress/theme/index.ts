@@ -3,6 +3,7 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
+import 'whale-ui/theme/index.scss'
 // import '@whale-ui/theme/src/index.scss'
 import VpDemo from '../vitepress/components/vp-demo.vue'
 import 'virtual:svg-icons-register';
