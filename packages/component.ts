@@ -1,8 +1,11 @@
 import { WlButton } from './components';
+import { WlRow, WlCol } from './components';
 
 
 
 export  {
-  WlButton
+  WlButton,
+  WlRow,
+  WlCol,
 }
 

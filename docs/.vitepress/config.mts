@@ -24,7 +24,9 @@ export default defineConfig({
         {
           text: "指南",
           items: [
-            { text: "快速开始", link: "/guide/quick-start" }
+            { text: "快速开始", link: "/guide/quick-start" },
+            { text: "字体设计", link: "/guide/font" },
+            { text: "布局设计", link: "/guide/layout" }
           ],
         },
       ],

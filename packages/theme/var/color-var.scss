@@ -1,0 +1,433 @@
+$wl-color-primary-50: #E6F4FF;
+$wl-color-primary-100: #BAE0FF;
+$wl-color-primary-200: #91CAFF;
+$wl-color-primary-300: #69B1FF;
+$wl-color-primary-400: #4096FF;
+$wl-color-primary-500: #1677FF;
+$wl-color-primary-600: #0958D9;
+$wl-color-primary-700: #003EB3;
+$wl-color-primary-800: #002C8C;
+$wl-color-primary-900: #001D66;
+
+$wl-color-secondary-50: #F9F0FF;
+$wl-color-secondary-100: #EFDBFF;
+$wl-color-secondary-200: #D3ADF7;
+$wl-color-secondary-300: #B37FEB;
+$wl-color-secondary-400: #9254DE;
+$wl-color-secondary-500: #722ED1;
+$wl-color-secondary-600: #531DAB;
+$wl-color-secondary-700: #3D0C8C;
+$wl-color-secondary-800: #2A0870;
+$wl-color-secondary-900: #1D064F;
+
+$wl-color-success-50: #F6FFED;
+$wl-color-success-100: #D9F7BE;
+$wl-color-success-200: #B7EB8F;
+$wl-color-success-300: #95DE64;
+$wl-color-success-400: #73D13D;
+$wl-color-success-500: #52C41A;
+$wl-color-success-600: #389E0D;
+$wl-color-success-700: #237804;
+$wl-color-success-800: #135200;
+$wl-color-success-900: #092B00;
+
+$wl-color-warning-50: #FFF7E6;
+$wl-color-warning-100: #FFE7BA;
+$wl-color-warning-200: #FFD591;
+$wl-color-warning-300: #FFC069;
+$wl-color-warning-400: #FFA940;
+$wl-color-warning-500: #FA8C16;
+$wl-color-warning-600: #D46B08;
+$wl-color-warning-700: #AD4E00;
+$wl-color-warning-800: #873800;
+$wl-color-warning-900: #612500;
+
+$wl-color-error-50: #FFF1F0;
+$wl-color-error-100: #FFCCC7;
+$wl-color-error-200: #FFA39E;
+$wl-color-error-300: #FF7875;
+$wl-color-error-400: #FF4D4F;
+$wl-color-error-500: #F5222D;
+$wl-color-error-600: #CF1322;
+$wl-color-error-700: #A8071A;
+$wl-color-error-800: #820014;
+$wl-color-error-900: #5C0011;
+
+$wl-color-neutral-50: #F5F5F5;
+$wl-color-neutral-100: #F0F0F0;
+$wl-color-neutral-200: #D9D9D9;
+$wl-color-neutral-300: #BFBFBF;
+$wl-color-neutral-400: #8C8C8C;
+$wl-color-neutral-500: #595959;
+$wl-color-neutral-600: #434343;
+$wl-color-neutral-700: #262626;
+$wl-color-neutral-800: #1F1F1F;
+$wl-color-neutral-900: #141414;
+
+$wl-color-primary: (
+  50: $wl-color-primary-50,
+  100: $wl-color-primary-100,
+  200: $wl-color-primary-200,
+  300: $wl-color-primary-300,
+  400: $wl-color-primary-400,
+  500: $wl-color-primary-500,
+  600: $wl-color-primary-600,
+  700: $wl-color-primary-700,
+  800: $wl-color-primary-800,
+  900: $wl-color-primary-900
+);
+
+$wl-color-secondary: (
+  50: $wl-color-secondary-50,
+  100: $wl-color-secondary-100,
+  200: $wl-color-secondary-200,
+  300: $wl-color-secondary-300,
+  400: $wl-color-secondary-400,
+  500: $wl-color-secondary-500,
+  600: $wl-color-secondary-600,
+  700: $wl-color-secondary-700,
+  800: $wl-color-secondary-800,
+  900: $wl-color-secondary-900
+);
+
+$wl-color-success: (
+  50: $wl-color-success-50,
+  100: $wl-color-success-100,
+  200: $wl-color-success-200,
+  300: $wl-color-success-300,
+  400: $wl-color-success-400,
+  500: $wl-color-success-500,
+  600: $wl-color-success-600,
+  700: $wl-color-success-700,
+  800: $wl-color-success-800,
+  900: $wl-color-success-900
+);
+
+$wl-color-warning: (
+  50: $wl-color-warning-50,
+  100: $wl-color-warning-100,
+  200: $wl-color-warning-200,
+  300: $wl-color-warning-300,
+  400: $wl-color-warning-400,
+  500: $wl-color-warning-500,
+  600: $wl-color-warning-600,
+  700: $wl-color-warning-700,
+  800: $wl-color-warning-800,
+  900: $wl-color-warning-900
+);
+
+$wl-color-error: (
+  50: $wl-color-error-50,
+  100: $wl-color-error-100,
+  200: $wl-color-error-200,
+  300: $wl-color-error-300,
+  400: $wl-color-error-400,
+  500: $wl-color-error-500,
+  600: $wl-color-error-600,
+  700: $wl-color-error-700,
+  800: $wl-color-error-800,
+  900: $wl-color-error-900
+);
+
+$wl-color-neutral: (
+  50: $wl-color-neutral-50,
+  100: $wl-color-neutral-100,
+  200: $wl-color-neutral-200,
+  300: $wl-color-neutral-300,
+  400: $wl-color-neutral-400,
+  500: $wl-color-neutral-500,
+  600: $wl-color-neutral-600,
+  700: $wl-color-neutral-700,
+  800: $wl-color-neutral-800,
+  900: $wl-color-neutral-900
+);
+
+$wl-color-volcano-1: #FFF2E8;
+$wl-color-volcano-2: #FFD8BF;
+$wl-color-volcano-3: #FFBB96;
+$wl-color-volcano-4: #FF9C6E;
+$wl-color-volcano-5: #FF7A45;
+$wl-color-volcano-6: #FA541C;
+$wl-color-volcano-7: #D4380D;
+$wl-color-volcano-8: #AD2102;
+$wl-color-volcano-9: #871400;
+$wl-color-volcano-10: #610B00;
+
+$wl-color-gold-1: #FFFBE6;
+$wl-color-gold-2: #FFF1B8;
+$wl-color-gold-3: #FFE58F;
+$wl-color-gold-4: #FFD666;
+$wl-color-gold-5: #FFC53D;
+$wl-color-gold-6: #FAAD14;
+$wl-color-gold-7: #D48806;
+$wl-color-gold-8: #AD6800;
+$wl-color-gold-9: #874D00;
+$wl-color-gold-10: #613400;
+
+$wl-color-yellow-1: #FEFFE6;
+$wl-color-yellow-2: #FFFFB8;
+$wl-color-yellow-3: #FFFB8F;
+$wl-color-yellow-4: #FFF566;
+$wl-color-yellow-5: #FFEC3D;
+$wl-color-yellow-6: #FADB14;
+$wl-color-yellow-7: #D4B106;
+$wl-color-yellow-8: #AD8B00;
+$wl-color-yellow-9: #876800;
+$wl-color-yellow-10: #614700;
+
+$wl-color-lime-1: #FCFFE6;
+$wl-color-lime-2: #F4FFB8;
+$wl-color-lime-3: #EAFF8F;
+$wl-color-lime-4: #D3F261;
+$wl-color-lime-5: #BAE637;
+$wl-color-lime-6: #A0D911;
+$wl-color-lime-7: #7CB305;
+$wl-color-lime-8: #5B8C00;
+$wl-color-lime-9: #3F6600;
+$wl-color-lime-10: #254000;
+
+$wl-color-cyan-1: #E6FFFB;
+$wl-color-cyan-2: #B5F5EC;
+$wl-color-cyan-3: #87E8DE;
+$wl-color-cyan-4: #5CDBD3;
+$wl-color-cyan-5: #36CFC9;
+$wl-color-cyan-6: #13C2C2;
+$wl-color-cyan-7: #08979C;
+$wl-color-cyan-8: #006D75;
+$wl-color-cyan-9: #00474F;
+$wl-color-cyan-10: #002329;
+
+$wl-color-geekblue-1: #F0F5FF;
+$wl-color-geekblue-2: #D6E4FF;
+$wl-color-geekblue-3: #ADC6FF;
+$wl-color-geekblue-4: #85A5FF;
+$wl-color-geekblue-5: #597EF7;
+$wl-color-geekblue-6: #2F54EB;
+$wl-color-geekblue-7: #1D39C4;
+$wl-color-geekblue-8: #10239E;
+$wl-color-geekblue-9: #061178;
+$wl-color-geekblue-10: #030852;
+
+$wl-color-magenta-1: #FFF0F6;
+$wl-color-magenta-2: #FFD6E7;
+$wl-color-magenta-3: #FFADD2;
+$wl-color-magenta-4: #FF85C0;
+$wl-color-magenta-5: #F759AB;
+$wl-color-magenta-6: #EB2F96;
+$wl-color-magenta-7: #C41D7F;
+$wl-color-magenta-8: #9E1068;
+$wl-color-magenta-9: #780650;
+$wl-color-magenta-10: #520339;
+
+$wl-color-purple-1: #F9F0FF;
+$wl-color-purple-2: #EFDBFF;
+$wl-color-purple-3: #D3ADF7;
+$wl-color-purple-4: #B37FEB;
+$wl-color-purple-5: #9254DE;
+$wl-color-purple-6: #722ED1;
+$wl-color-purple-7: #531DAB;
+$wl-color-purple-8: #3D0C8C;
+$wl-color-purple-9: #2A0870;
+$wl-color-purple-10: #1D064F;
+
+$wl-color-green-1: #F6FFED;
+$wl-color-green-2: #D9F7BE;
+$wl-color-green-3: #B7EB8F;
+$wl-color-green-4: #95DE64;
+$wl-color-green-5: #73D13D;
+$wl-color-green-6: #52C41A;
+$wl-color-green-7: #389E0D;
+$wl-color-green-8: #237804;
+$wl-color-green-9: #135200;
+$wl-color-green-10: #092B00;
+
+$wl-color-orange-1: #FFF7E6;
+$wl-color-orange-2: #FFE7BA;
+$wl-color-orange-3: #FFD591;
+$wl-color-orange-4: #FFC069;
+$wl-color-orange-5: #FFA940;
+$wl-color-orange-6: #FA8C16;
+$wl-color-orange-7: #D46B08;
+$wl-color-orange-8: #AD4E00;
+$wl-color-orange-9: #873800;
+$wl-color-orange-10: #612500;
+
+$wl-color-red-1: #FFF1F0;
+$wl-color-red-2: #FFCCC7;
+$wl-color-red-3: #FFA39E;
+$wl-color-red-4: #FF7875;
+$wl-color-red-5: #FF4D4F;
+$wl-color-red-6: #F5222D;
+$wl-color-red-7: #CF1322;
+$wl-color-red-8: #A8071A;
+$wl-color-red-9: #820014;
+$wl-color-red-10: #5C0011;
+
+$wl-color-volcano: (
+  1: $wl-color-volcano-1,
+  2: $wl-color-volcano-2,
+  3: $wl-color-volcano-3,
+  4: $wl-color-volcano-4,
+  5: $wl-color-volcano-5,
+  6: $wl-color-volcano-6,
+  7: $wl-color-volcano-7,
+  8: $wl-color-volcano-8,
+  9: $wl-color-volcano-9,
+  10: $wl-color-volcano-10
+);
+
+$wl-color-gold: (
+  1: $wl-color-gold-1,
+  2: $wl-color-gold-2,
+  3: $wl-color-gold-3,
+  4: $wl-color-gold-4,
+  5: $wl-color-gold-5,
+  6: $wl-color-gold-6,
+  7: $wl-color-gold-7,
+  8: $wl-color-gold-8,
+  9: $wl-color-gold-9,
+  10: $wl-color-gold-10
+);
+
+$wl-color-yellow: (
+  1: $wl-color-yellow-1,
+  2: $wl-color-yellow-2,
+  3: $wl-color-yellow-3,
+  4: $wl-color-yellow-4,
+  5: $wl-color-yellow-5,
+  6: $wl-color-yellow-6,
+  7: $wl-color-yellow-7,
+  8: $wl-color-yellow-8,
+  9: $wl-color-yellow-9,
+  10: $wl-color-yellow-10
+);
+
+$wl-color-lime: (
+  1: $wl-color-lime-1,
+  2: $wl-color-lime-2,
+  3: $wl-color-lime-3,
+  4: $wl-color-lime-4,
+  5: $wl-color-lime-5,
+  6: $wl-color-lime-6,
+  7: $wl-color-lime-7,
+  8: $wl-color-lime-8,
+  9: $wl-color-lime-9,
+  10: $wl-color-lime-10
+);
+
+$wl-color-cyan: (
+  1: $wl-color-cyan-1,
+  2: $wl-color-cyan-2,
+  3: $wl-color-cyan-3,
+  4: $wl-color-cyan-4,
+  5: $wl-color-cyan-5,
+  6: $wl-color-cyan-6,
+  7: $wl-color-cyan-7,
+  8: $wl-color-cyan-8,
+  9: $wl-color-cyan-9,
+  10: $wl-color-cyan-10
+);
+
+$wl-color-geekblue: (
+  1: $wl-color-geekblue-1,
+  2: $wl-color-geekblue-2,
+  3: $wl-color-geekblue-3,
+  4: $wl-color-geekblue-4,
+  5: $wl-color-geekblue-5,
+  6: $wl-color-geekblue-6,
+  7: $wl-color-geekblue-7,
+  8: $wl-color-geekblue-8,
+  9: $wl-color-geekblue-9,
+  10: $wl-color-geekblue-10
+);
+
+$wl-color-magenta: (
+  1: $wl-color-magenta-1,
+  2: $wl-color-magenta-2,
+  3: $wl-color-magenta-3,
+  4: $wl-color-magenta-4,
+  5: $wl-color-magenta-5,
+  6: $wl-color-magenta-6,
+  7: $wl-color-magenta-7,
+  8: $wl-color-magenta-8,
+  9: $wl-color-magenta-9,
+  10: $wl-color-magenta-10
+);
+
+$wl-color-purple-scale: (
+  1: $wl-color-purple-1,
+  2: $wl-color-purple-2,
+  3: $wl-color-purple-3,
+  4: $wl-color-purple-4,
+  5: $wl-color-purple-5,
+  6: $wl-color-purple-6,
+  7: $wl-color-purple-7,
+  8: $wl-color-purple-8,
+  9: $wl-color-purple-9,
+  10: $wl-color-purple-10
+);
+
+$wl-color-green-scale: (
+  1: $wl-color-green-1,
+  2: $wl-color-green-2,
+  3: $wl-color-green-3,
+  4: $wl-color-green-4,
+  5: $wl-color-green-5,
+  6: $wl-color-green-6,
+  7: $wl-color-green-7,
+  8: $wl-color-green-8,
+  9: $wl-color-green-9,
+  10: $wl-color-green-10
+);
+
+$wl-color-orange-scale: (
+  1: $wl-color-orange-1,
+  2: $wl-color-orange-2,
+  3: $wl-color-orange-3,
+  4: $wl-color-orange-4,
+  5: $wl-color-orange-5,
+  6: $wl-color-orange-6,
+  7: $wl-color-orange-7,
+  8: $wl-color-orange-8,
+  9: $wl-color-orange-9,
+  10: $wl-color-orange-10
+);
+
+$wl-color-red-scale: (
+  1: $wl-color-red-1,
+  2: $wl-color-red-2,
+  3: $wl-color-red-3,
+  4: $wl-color-red-4,
+  5: $wl-color-red-5,
+  6: $wl-color-red-6,
+  7: $wl-color-red-7,
+  8: $wl-color-red-8,
+  9: $wl-color-red-9,
+  10: $wl-color-red-10
+);
+
+@mixin wl-export-color-map($map, $name) {
+  @each $k, $v in $map {
+    --wl-color-#{$name}-#{$k}: #{$v};
+  }
+}
+
+:root {
+  @include wl-export-color-map($wl-color-primary, 'primary');
+  @include wl-export-color-map($wl-color-secondary, 'secondary');
+  @include wl-export-color-map($wl-color-success, 'success');
+  @include wl-export-color-map($wl-color-warning, 'warning');
+  @include wl-export-color-map($wl-color-error, 'error');
+  @include wl-export-color-map($wl-color-neutral, 'neutral');
+  @include wl-export-color-map($wl-color-volcano, 'volcano');
+  @include wl-export-color-map($wl-color-gold, 'gold');
+  @include wl-export-color-map($wl-color-yellow, 'yellow');
+  @include wl-export-color-map($wl-color-lime, 'lime');
+  @include wl-export-color-map($wl-color-cyan, 'cyan');
+  @include wl-export-color-map($wl-color-geekblue, 'geekblue');
+  @include wl-export-color-map($wl-color-magenta, 'magenta');
+  @include wl-export-color-map($wl-color-purple-scale, 'purple');
+  @include wl-export-color-map($wl-color-green-scale, 'green');
+  @include wl-export-color-map($wl-color-orange-scale, 'orange');
+  @include wl-export-color-map($wl-color-red-scale, 'red');
+}

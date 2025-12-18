@@ -1,1 +1,3 @@
-@use '../components/button/style/index.scss';
+@use '@whale-ui/components/button/style' as *;
+@use '@whale-ui/components/col/style' as *;
+@use '@whale-ui/components/row/style' as *;

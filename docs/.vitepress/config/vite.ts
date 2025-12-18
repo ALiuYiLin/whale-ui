@@ -2,6 +2,9 @@ import { UserConfig } from "vitepress";
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { MarkdownTransform } from '../plugins/markdown-transforms'
 import path, { resolve } from 'path'
+import tailwindcss from  'tailwindcss'
+import postcss from 'postcss'
+import autoprefixer from 'autoprefixer'
 
 type ViteConfig = Required<UserConfig>['vite']
 
@@ -16,11 +19,14 @@ export const viteConfig:ViteConfig = {
     },
   },
   plugins:[
+    postcss({
+      plugins: [tailwindcss, autoprefixer],
+    }),
     MarkdownTransform(),
     createSvgIconsPlugin({
       iconDirs:[path.resolve(__dirname,"../vitepress/assets/icons")],
       symbolId:'icon-[name]'
-    })
+    }),
   ],
   resolve: {
     alias: {
