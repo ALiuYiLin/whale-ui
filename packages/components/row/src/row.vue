@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useNamespace } from '@whale-ui/hooks';
-import { rowContextKey, rowProps } from './row';
+import { gutterMap, rowContextKey, rowProps } from './row';
 import { computed, provide } from 'vue';
 
 const props = defineProps(rowProps)
@@ -15,9 +15,19 @@ const rowKls = computed(() => {
 })
 
 const rowStyles = computed(() => {
+  let gutter:number|null
+  if(typeof props.gutter === 'string'){
+    gutter = gutterMap[props.gutter as keyof typeof gutterMap]
+  }
+  else if(typeof props.gutter === 'number'){
+    gutter = props.gutter
+  }
+  else{
+    gutter = 0
+  }
   return {
     flexWrap: props.wrap ? 'wrap' : 'nowrap',
-    marginInline: `-${props.gutter/2}px`,
+    marginInline: `-${gutter/2}px`,
   }
 })
 const gutter = computed(() => props.gutter)

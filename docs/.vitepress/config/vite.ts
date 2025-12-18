@@ -1,31 +1,28 @@
 import { UserConfig } from "vitepress";
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
-import { MarkdownTransform } from '../plugins/markdown-transforms'
-import path, { resolve } from 'path'
-import tailwindcss from  'tailwindcss'
-import postcss from 'postcss'
-import autoprefixer from 'autoprefixer'
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
+import { MarkdownTransform } from "../plugins/markdown-transforms";
+import path, { resolve } from "path";
+import tailwindcss from '@tailwindcss/vite'
 
-type ViteConfig = Required<UserConfig>['vite']
 
-export const viteConfig:ViteConfig = {
+type ViteConfig = Required<UserConfig>["vite"];
+
+export const viteConfig: ViteConfig = {
   css: {
     preprocessorOptions: {
       scss: {
         // additionalData: `@use "@whale-ui/styles/index.scss" as *;`,
-        api: 'modern-compiler',
-        silenceDeprecations: ['legacy-js-api'],
+        api: "modern-compiler",
+        silenceDeprecations: ["legacy-js-api"],
       },
     },
   },
-  plugins:[
-    postcss({
-      plugins: [tailwindcss, autoprefixer],
-    }),
+  plugins: [
+    tailwindcss(),
     MarkdownTransform(),
     createSvgIconsPlugin({
-      iconDirs:[path.resolve(__dirname,"../vitepress/assets/icons")],
-      symbolId:'icon-[name]'
+      iconDirs: [path.resolve(__dirname, "../vitepress/assets/icons")],
+      symbolId: "icon-[name]",
     }),
   ],
   resolve: {
@@ -34,4 +31,4 @@ export const viteConfig:ViteConfig = {
       "@whale-ui": resolve(__dirname, "../../../packages"),
     },
   },
-}
+};

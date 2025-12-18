@@ -1,14 +1,24 @@
 <script lang="ts" setup>
 import { computed, inject } from 'vue';
 import { colProps } from './col';
-import { rowContextKey } from '@whale-ui/components/row';
+import { gutterMap, rowContextKey } from '@whale-ui/components/row';
 import { useNamespace } from '@whale-ui/hooks';
 const props = defineProps(colProps)
 const { gutter } = inject(rowContextKey, { gutter: computed(() => 0) })
 const ns = useNamespace('col')
 const colStyles = computed(() => {
+  let gutterValue:number
+  if(typeof gutter.value === 'string'){
+    gutterValue = gutterMap[gutter.value as keyof typeof gutterMap]
+  }
+  else if(typeof gutter.value === 'number'){
+    gutterValue = gutter.value
+  }
+  else{
+    gutterValue = 0
+  }
   return {
-    paddingInline: `${gutter.value/2}px`,
+    paddingInline: `${gutterValue/2}px`,
   }
 })
 const colKls = computed(() => {

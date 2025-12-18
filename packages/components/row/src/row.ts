@@ -1,14 +1,22 @@
 import { buildProps } from "@whale-ui/utils";
 import { wrap } from "lodash-unified";
-import { ComputedRef, ExtractPropTypes, InjectionKey } from "vue";
+import { ComputedRef, ExtractPropTypes, InjectionKey, PropType } from "vue";
+
+export const gutterMap = {
+  xs: 0,
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 24,
+  xxl: 32,
+} as const
 
 
 
 export const rowProps = buildProps({
   gutter: {
-    type: Number,
+    type: [Number, String] as PropType<number| keyof typeof gutterMap>,
     default: 8,
-    values: [0, 8, 12, 16, 24, 32],
   },
   justify: {
     type: String,
@@ -30,6 +38,6 @@ export const rowProps = buildProps({
 export type RowProps = ExtractPropTypes<typeof rowProps>
 
 interface RowContext {
-  gutter: ComputedRef<number>
+  gutter: ComputedRef<RowProps['gutter']>
 }
 export const rowContextKey: InjectionKey<RowContext> = Symbol('rowContextKey')

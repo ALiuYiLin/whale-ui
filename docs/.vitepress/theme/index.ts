@@ -7,7 +7,7 @@ import 'whale-ui/theme/index.scss'
 // import '@whale-ui/theme/src/index.scss'
 import VpDemo from '../vitepress/components/vp-demo.vue'
 import 'virtual:svg-icons-register';
-
+import './index.css'
 
 
 export default {
