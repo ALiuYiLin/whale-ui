@@ -1,44 +1,31 @@
 <script lang="ts" setup>
-import { useNamespace } from '@whale-ui/hooks';
-import { gutterMap, rowContextKey, rowProps } from './row';
-import { computed, provide } from 'vue';
+import { useNamespace } from "@whale-ui/hooks";
+import {  rowContextKey, rowProps } from "./row";
+import { computed, provide } from "vue";
+import { getGutterStyles } from "./gutter-styles";
 
-const props = defineProps(rowProps)
-const ns = useNamespace('row')
+const props = defineProps(rowProps);
+const ns = useNamespace("row");
+const gutter = computed(() => props.gutter);
 
 const rowKls = computed(() => {
   return [
     ns.b(),
-    ns.is('justify-' + props.justify),
-    ns.is('align-' + props.align),
-  ]
-})
+    ns.is("justify-" + props.justify),
+    ns.is("align-" + props.align),
+  ];
+});
 
 const rowStyles = computed(() => {
-  let gutter:number|null
-  if(typeof props.gutter === 'string'){
-    gutter = gutterMap[props.gutter as keyof typeof gutterMap]
-  }
-  else if(typeof props.gutter === 'number'){
-    gutter = props.gutter
-  }
-  else{
-    gutter = 0
-  }
   return {
-    flexWrap: props.wrap ? 'wrap' : 'nowrap',
-    marginInline: `-${gutter/2}px`,
-  }
-})
-const gutter = computed(() => props.gutter)
-
-
+    flexWrap: props.wrap ? "wrap" : "nowrap",
+    ...getGutterStyles(props.gutter),
+  };
+});
 
 provide(rowContextKey, {
   gutter,
-})
-
-
+});
 </script>
 
 <template>
@@ -46,4 +33,3 @@ provide(rowContextKey, {
     <slot></slot>
   </component>
 </template>
-
