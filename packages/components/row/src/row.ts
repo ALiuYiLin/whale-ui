@@ -26,6 +26,10 @@ export const rowProps = buildProps({
     default: true,
     values: [true, false],
   },
+  component: {
+    type: String,
+    default: 'div',
+  },
 } as const);
 
 export type RowProps = ExtractPropTypes<typeof rowProps>;

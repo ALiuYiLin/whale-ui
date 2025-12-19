@@ -3,6 +3,9 @@ import { WlRow, WlCol } from 'whale-ui'
 </script>
 <template>
   <wl-row :gutter="[12, 8]">
+    <wl-col>
+      <div class="bg-gray-200 text-center">24</div>
+    </wl-col>
     <wl-col :span="12" v-for="i in 2">
       <div class="bg-gray-200 text-center">12</div>
     </wl-col>

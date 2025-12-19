@@ -20,6 +20,13 @@
 - `xl ≥ 1200px`
 - `xxl ≥ 1600px`
 
+栅格 布局
 :::demo
 layout/base
+:::
+
+flex 布局
+
+:::demo
+layout/flex/base
 :::

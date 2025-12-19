@@ -29,7 +29,7 @@ provide(rowContextKey, {
 </script>
 
 <template>
-  <component :is="'div'" :class="rowKls" :style="rowStyles">
+  <component :is="component" :class="rowKls" :style="rowStyles">
     <slot></slot>
   </component>
 </template>

@@ -1,0 +1,43 @@
+@use '@whale-ui/theme/mixins' as *;
+
+@include b(flex) {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  @include when(justify-center) {
+    justify-content: center;
+  }
+  @include when(justify-end) {
+    justify-content: flex-end;
+  }
+  @include when(justify-start) {
+    justify-content: start;
+  }
+  @include when(justify-between) {
+    justify-content: space-between;
+  }
+  @include when(justify-around) {
+    justify-content: space-around;
+  }
+  @include when(justify-evenly) {
+    justify-content: space-evenly;
+  }
+  @include when(align-start) {
+    align-items: flex-start;
+  }
+  @include when(align-center) {
+    align-items: center;
+  }
+  @include when(align-end) {
+    align-items: flex-end;
+  }
+  @include when(align-baseline) {
+    align-items: baseline;
+  }
+  @include when(align-stretch) {
+    align-items: stretch;
+  }
+
+  
+}
