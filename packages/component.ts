@@ -1,12 +1,3 @@
-import { WlButton } from './components';
-import { WlRow, WlCol, WlFlex } from './components';
+import { WlButton, WlDivider, WlRow, WlCol, WlFlex } from "./components";
 
-
-
-export  {
-  WlButton,
-  WlRow,
-  WlCol,
-  WlFlex,
-}
-
+export { WlButton, WlRow, WlCol, WlFlex, WlDivider };

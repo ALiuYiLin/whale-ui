@@ -34,7 +34,8 @@ export default defineConfig({
         {
           text: "组件",
           items: [
-            { text: "按钮", link: "/components/button" }
+            { text: "按钮", link: "/components/button" },
+            { text: "分割线", link: "/components/divider" }
           ]
         }
       ],
