@@ -20,7 +20,7 @@ tooltip/placements
 tooltip/click
 :::
 
-## 受控显示
+<!-- ## 受控显示
 
 :::demo
 tooltip/controlled
@@ -42,7 +42,7 @@ tooltip/slot
 
 :::demo
 tooltip/vars
-:::
+::: -->
 ## API
 
 | 属性 | 说明 | 类型 | 默认值 |

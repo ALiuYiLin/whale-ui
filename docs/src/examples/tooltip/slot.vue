@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { WlTooltip } from 'whale-ui'
+import { WlTooltip, WlFlex } from 'whale-ui'
 </script>
 <template>
-  <div class="space-x-4">
+  <wl-flex gap="small" align="center">
     <wl-tooltip placement="bottom">
-      <button class="px-2 py-1 border rounded">custom slot</button>
+      <button class="px-2 py-1 border border-solid border-indigo-500 rounded">custom slot</button>
       <template #content>
         <div class="flex items-center space-x-2">
           <span class="inline-block w-2 h-2 rounded-full bg-green-500"></span>
@@ -12,5 +12,5 @@ import { WlTooltip } from 'whale-ui'
         </div>
       </template>
     </wl-tooltip>
-  </div>
+  </wl-flex>
 </template>
