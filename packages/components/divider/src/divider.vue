@@ -10,11 +10,11 @@ const slots = useSlots();
 const dividerKls = computed(() => {
   return [
     ns.b(),
-    ns.is(`with-text`,!!slots.default && !props.vertical),
-    ns.is("vertical", props.vertical),
-    ns.is("horizontal", !props.vertical),
+    ns.m('with-text',!!slots.default && !props.vertical),
+    ns.m("vertical", props.vertical),
+    ns.m("horizontal", !props.vertical),
     ns.m(props.variant),
-    ns.is(`text-${props.titlePlacement}`, !!slots.default && !props.vertical),
+    ns.m(`text-${props.titlePlacement}`, !!slots.default && !props.vertical),
   ];
 });
 </script>
