@@ -1,0 +1,8 @@
+@use '@whale-ui/theme/mixins' as *;
+@include b('button') {
+  color: yellow;
+  border: 1px solid black;
+  p {
+    color: blue;
+  }
+}
