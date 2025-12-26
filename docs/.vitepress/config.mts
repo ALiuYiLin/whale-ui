@@ -37,6 +37,7 @@ export default defineConfig({
             { text: "按钮", link: "/components/button" },
             { text: "分割线", link: "/components/divider" },
             { text: "flex", link: "/components/flex" },
+            { text: "工具提示", link: "/components/tooltip" },
           ]
         }
       ],

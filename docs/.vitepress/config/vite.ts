@@ -11,7 +11,6 @@ export const viteConfig: ViteConfig = {
   css: {
     preprocessorOptions: {
       scss: {
-        // additionalData: `@use "@whale-ui/styles/index.scss" as *;`,
         api: "modern-compiler",
         silenceDeprecations: ["legacy-js-api"],
       },

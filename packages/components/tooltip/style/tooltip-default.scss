@@ -1,0 +1,182 @@
+@use '@whale-ui/theme/mixins' as *;
+@use '@whale-ui/theme/var' as *;
+
+$tooltipVars: (
+  'bg': getCssVar('color', 'neutral', '800'),
+  'color': getCssVar('color', 'neutral', '50'),
+  'border-color': getCssVar('color', 'neutral', '800'),
+  'font-size': 12px,
+  'radius': 4px,
+  'padding': 6px 8px,
+  'shadow': 0 6px 16px 0 rgba(0, 0, 0, 0.08), 
+  'z-index': 1000,
+  'gap': 8px
+);
+
+@include b(tooltip) {
+  @include set-component-css-var(tooltip, $tooltipVars);
+  position: relative;
+  display: inline-block;
+
+  .#{$namespace}-tooltip__content {
+    position: absolute;
+    background: getCssVar('tooltip','bg');
+    color: getCssVar('tooltip','color');
+    border: 1px solid getCssVar('tooltip','border-color');
+    border-radius: getCssVar('tooltip','radius');
+    padding: getCssVar('tooltip','padding');
+    font-size: getCssVar('tooltip','font-size');
+    box-shadow: getCssVar('tooltip','shadow');
+    white-space: nowrap;
+    z-index: getCssVar('tooltip','z-index');
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .12s ease;
+  }
+
+  &.is-visible .#{$namespace}-tooltip__content {
+    opacity: 1;
+    visibility: visible;
+  }
+  &.#{$namespace}-tooltip--hover:hover .#{$namespace}-tooltip__content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.#{$namespace}-tooltip--top .#{$namespace}-tooltip__content {
+    bottom: calc(100% + getCssVar('tooltip','gap'));
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.#{$namespace}-tooltip--topLeft .#{$namespace}-tooltip__content {
+    bottom: calc(100% + getCssVar('tooltip','gap'));
+    left: 0;
+  }
+  &.#{$namespace}-tooltip--topRight .#{$namespace}-tooltip__content {
+    bottom: calc(100% + getCssVar('tooltip','gap'));
+    right: 0;
+  }
+  &.#{$namespace}-tooltip--bottom .#{$namespace}-tooltip__content {
+    top: calc(100% + getCssVar('tooltip','gap'));
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.#{$namespace}-tooltip--bottomLeft .#{$namespace}-tooltip__content {
+    top: calc(100% + getCssVar('tooltip','gap'));
+    left: 0;
+  }
+  &.#{$namespace}-tooltip--bottomRight .#{$namespace}-tooltip__content {
+    top: calc(100% + getCssVar('tooltip','gap'));
+    right: 0;
+  }
+  &.#{$namespace}-tooltip--left .#{$namespace}-tooltip__content {
+    right: calc(100% + getCssVar('tooltip','gap'));
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.#{$namespace}-tooltip--leftTop .#{$namespace}-tooltip__content {
+    right: calc(100% + getCssVar('tooltip','gap'));
+    top: 0;
+  }
+  &.#{$namespace}-tooltip--leftBottom .#{$namespace}-tooltip__content {
+    right: calc(100% + getCssVar('tooltip','gap'));
+    bottom: 0;
+  }
+  &.#{$namespace}-tooltip--right .#{$namespace}-tooltip__content {
+    left: calc(100% + getCssVar('tooltip','gap'));
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.#{$namespace}-tooltip--rightTop .#{$namespace}-tooltip__content {
+    left: calc(100% + getCssVar('tooltip','gap'));
+    top: 0;
+  }
+  &.#{$namespace}-tooltip--rightBottom .#{$namespace}-tooltip__content {
+    left: calc(100% + getCssVar('tooltip','gap'));
+    bottom: 0;
+  }
+
+  .#{$namespace}-tooltip__arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  &.#{$namespace}-tooltip--top .#{$namespace}-tooltip__arrow {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    border-width: 6px 6px 0 6px;
+    border-color: getCssVar('tooltip','bg') transparent transparent transparent;
+  }
+  &.#{$namespace}-tooltip--topLeft .#{$namespace}-tooltip__arrow {
+    left: 12px;
+    top: 100%;
+    border-width: 6px 6px 0 6px;
+    border-color: getCssVar('tooltip','bg') transparent transparent transparent;
+  }
+  &.#{$namespace}-tooltip--topRight .#{$namespace}-tooltip__arrow {
+    right: 12px;
+    top: 100%;
+    border-width: 6px 6px 0 6px;
+    border-color: getCssVar('tooltip','bg') transparent transparent transparent;
+  }
+  &.#{$namespace}-tooltip--bottom .#{$namespace}-tooltip__arrow {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent getCssVar('tooltip','bg') transparent;
+  }
+  &.#{$namespace}-tooltip--bottomLeft .#{$namespace}-tooltip__arrow {
+    left: 12px;
+    bottom: 100%;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent getCssVar('tooltip','bg') transparent;
+  }
+  &.#{$namespace}-tooltip--bottomRight .#{$namespace}-tooltip__arrow {
+    right: 12px;
+    bottom: 100%;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent getCssVar('tooltip','bg') transparent;
+  }
+  &.#{$namespace}-tooltip--left .#{$namespace}-tooltip__arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent getCssVar('tooltip','bg');
+  }
+  &.#{$namespace}-tooltip--leftTop .#{$namespace}-tooltip__arrow {
+    top: 12px;
+    left: 100%;
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent getCssVar('tooltip','bg');
+  }
+  &.#{$namespace}-tooltip--leftBottom .#{$namespace}-tooltip__arrow {
+    bottom: 12px;
+    left: 100%;
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent getCssVar('tooltip','bg');
+  }
+  &.#{$namespace}-tooltip--right .#{$namespace}-tooltip__arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+    border-width: 6px 6px 6px 0;
+    border-color: transparent getCssVar('tooltip','bg') transparent transparent;
+  }
+  &.#{$namespace}-tooltip--rightTop .#{$namespace}-tooltip__arrow {
+    top: 12px;
+    right: 100%;
+    border-width: 6px 6px 6px 0;
+    border-color: transparent getCssVar('tooltip','bg') transparent transparent;
+  }
+  &.#{$namespace}-tooltip--rightBottom .#{$namespace}-tooltip__arrow {
+    bottom: 12px;
+    right: 100%;
+    border-width: 6px 6px 6px 0;
+    border-color: transparent getCssVar('tooltip','bg') transparent transparent;
+  }
+}
