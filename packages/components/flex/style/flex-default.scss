@@ -2,8 +2,6 @@
 
 @include b(flex) {
   display: flex;
-  margin: 0;
-  padding: 0;
 
   @include when(justify-center) {
     justify-content: center;
