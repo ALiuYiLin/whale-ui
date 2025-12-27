@@ -1,8 +1,136 @@
 @use '@whale-ui/theme/mixins' as *;
+@use '@whale-ui/theme/var' as *;
+
+$buttonVars: (
+  'height-small': 28px,
+  'height-middle': 32px,
+  'height-large': 40px,
+  'padding-small': 0 12px,
+  'padding-middle': 0 16px,
+  'padding-large': 0 20px,
+  'font-size': 14px,
+  'radius': 6px,
+  'gap': 8px,
+  'bg': getCssVar('color','neutral','100'),
+  'color': getCssVar('color','neutral','900'),
+  'border-color': getCssVar('color','neutral','300'),
+  'bg-primary': getCssVar('color','primary','500'),
+  'bg-success': getCssVar('color','success','500'),
+  'bg-warning': getCssVar('color','warning','500'),
+  'bg-danger': getCssVar('color','error','500'),
+  'color-on-primary': #fff,
+  'shadow': 0 2px 0 rgba(0,0,0,0.02)
+);
+
 @include b('button') {
-  color: yellow;
-  border: 1px solid black;
-  p {
-    color: blue;
+  @include set-component-css-var(button, $buttonVars);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid getCssVar('button','border-color');
+  background-color: getCssVar('button','bg');
+  color: getCssVar('button','color');
+  border-radius: getCssVar('button','radius');
+  font-size: getCssVar('button','font-size');
+  line-height: 1;
+  gap: getCssVar('button','gap');
+  transition: all .12s ease;
+
+  &.wl-button--small {
+    min-height: getCssVar('button','height-small');
+    padding: getCssVar('button','padding-small');
+  }
+  &.wl-button--middle {
+    min-height: getCssVar('button','height-middle');
+    padding: getCssVar('button','padding-middle');
+  }
+  &.wl-button--large {
+    min-height: getCssVar('button','height-large');
+    padding: getCssVar('button','padding-large');
+  }
+
+  &.is-round {
+    border-radius: 20px;
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: 0;
+    width: getCssVar('button','height-middle');
+    height: getCssVar('button','height-middle');
+  }
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: .6;
+    // pointer-events: none;
+  }
+
+  &.is-loading {
+    cursor: wait;
+    // pointer-events: none;
+  }
+
+  .#{$namespace}-button__spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255,255,255,.4);
+    border-top-color: rgba(255,255,255,1);
+    border-radius: 50%;
+    animation: #{$namespace}-spin 0.8s linear infinite;
+  }
+  @keyframes #{$namespace}-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  // type modifiers
+  &.wl-button--primary {
+    background-color: getCssVar('button','bg-primary');
+    border-color: getCssVar('button','bg-primary');
+    color: getCssVar('button','color-on-primary');
+  }
+  &.wl-button--success {
+    background-color: getCssVar('button','bg-success');
+    border-color: getCssVar('button','bg-success');
+    color: getCssVar('button','color-on-primary');
+  }
+  &.wl-button--warning {
+    background-color: getCssVar('button','bg-warning');
+    border-color: getCssVar('button','bg-warning');
+    color: getCssVar('button','color-on-primary');
+  }
+  &.wl-button--danger {
+    background-color: getCssVar('button','bg-danger');
+    border-color: getCssVar('button','bg-danger');
+    color: getCssVar('button','color-on-primary');
+  }
+  &.wl-button--default {
+    // keep default vars
+  }
+
+  // plain state turns button to outline
+  &.is-plain {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  // link variant
+  &.wl-button--link {
+    background-color: transparent;
+    border-color: transparent;
+    color: getCssVar('color','primary','500');
+    padding: 0;
+    min-height: auto;
+  }
+
+  // text variant
+  &.wl-button--text {
+    background-color: transparent;
+    border-color: transparent;
+    color: getCssVar('color','neutral','900');
+    padding: 0;
+    min-height: auto;
   }
 }
