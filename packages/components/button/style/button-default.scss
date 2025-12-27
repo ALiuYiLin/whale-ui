@@ -11,7 +11,7 @@ $buttonVars: (
   'font-size': 14px,
   'radius': 6px,
   'gap': 8px,
-  'bg': getCssVar('color','neutral','100'),
+  'bg': getCssVar('color','neutral','300'),
   'color': getCssVar('color','neutral','900'),
   'border-color': getCssVar('color','neutral','300'),
   'bg-primary': getCssVar('color','primary','500'),
@@ -40,35 +40,34 @@ $buttonVars: (
   gap: getCssVar('button','gap');
   transition: all .12s ease;
 
-  &.wl-button--small {
+  @include m(small) {
     min-height: getCssVar('button','height-small');
     padding: getCssVar('button','padding-small');
   }
-  &.wl-button--middle {
+  @include m(middle) {
     min-height: getCssVar('button','height-middle');
     padding: getCssVar('button','padding-middle');
   }
-  &.wl-button--large {
+  @include m(large) {
     min-height: getCssVar('button','height-large');
     padding: getCssVar('button','padding-large');
   }
 
-  &.is-round {
+  @include when(round) {
     border-radius: 20px;
   }
-  &.is-circle {
+  @include when(circle) {
     border-radius: 50%;
     padding: 0;
     width: getCssVar('button','height-middle');
     height: getCssVar('button','height-middle');
   }
-  &.is-disabled {
+  @include when(disabled) {
     cursor: not-allowed;
     opacity: .6;
     // pointer-events: none;
   }
-
-  &.is-loading {
+  @include when(loading) {
     cursor: wait;
     // pointer-events: none;
   }
@@ -86,38 +85,53 @@ $buttonVars: (
   }
 
   // type modifiers
-  &.wl-button--primary {
+  @include m(primary) {
     background-color: getCssVar('button','bg-primary');
     border-color: getCssVar('button','bg-primary');
     color: getCssVar('button','color-on-primary');
   }
-  &.wl-button--success {
+  @include m(success) {
     background-color: getCssVar('button','bg-success');
     border-color: getCssVar('button','bg-success');
     color: getCssVar('button','color-on-primary');
   }
-  &.wl-button--warning {
+  @include m(warning) {
     background-color: getCssVar('button','bg-warning');
     border-color: getCssVar('button','bg-warning');
     color: getCssVar('button','color-on-primary');
   }
-  &.wl-button--danger {
+  @include m(danger) {
     background-color: getCssVar('button','bg-danger');
     border-color: getCssVar('button','bg-danger');
     color: getCssVar('button','color-on-primary');
   }
-  &.wl-button--default {
+  @include m(default) {
     // keep default vars
   }
 
   // plain state turns button to outline
-  &.is-plain {
+  // variants
+  @include m(filled) {
+    // default behavior handled by type modifiers below
+  }
+  @include m(solid) {
+    // keeps neutral solid style without type fill
+    background-color: getCssVar('button','bg');
+    border-color: getCssVar('button','border-color');
+    color: getCssVar('button','color');
+  }
+  @include m(outlined) {
     background-color: transparent;
-    color: inherit;
+    color: getCssVar('button','color');
+  }
+  @include m(dashed) {
+    background-color: transparent;
+    border-style: dashed;
+    color: getCssVar('button','color');
   }
 
   // link variant
-  &.wl-button--link {
+  @include m(link) {
     background-color: transparent;
     border-color: transparent;
     color: getCssVar('color','primary','500');
@@ -126,11 +140,72 @@ $buttonVars: (
   }
 
   // text variant
-  &.wl-button--text {
+  @include m(text) {
     background-color: transparent;
     border-color: transparent;
     color: getCssVar('color','neutral','900');
     padding: 0;
     min-height: auto;
+  }
+
+  // outlined/dashed color mapping by type
+  @include m_and(outlined, primary) {
+    border-color: getCssVar('button','bg-primary');
+    color: getCssVar('button','bg-primary');
+  }
+  @include m_and(dashed, primary) {
+    border-color: getCssVar('button','bg-primary');
+    color: getCssVar('button','bg-primary');
+  }
+  @include m_and(outlined, success) {
+    border-color: getCssVar('button','bg-success');
+    color: getCssVar('button','bg-success');
+  }
+  @include m_and(dashed, success) {
+    border-color: getCssVar('button','bg-success');
+    color: getCssVar('button','bg-success');
+  }
+  @include m_and(outlined, warning) {
+    border-color: getCssVar('button','bg-warning');
+    color: getCssVar('button','bg-warning');
+  }
+  @include m_and(dashed, warning) {
+    border-color: getCssVar('button','bg-warning');
+    color: getCssVar('button','bg-warning');
+  }
+  @include m_and(outlined, danger) {
+    border-color: getCssVar('button','bg-danger');
+    color: getCssVar('button','bg-danger');
+  }
+  @include m_and(dashed, danger) {
+    border-color: getCssVar('button','bg-danger');
+    color: getCssVar('button','bg-danger');
+  }
+  @include m_and(text, danger) {
+    color: getCssVar('button','bg-danger');
+  }
+  @include m_and(link, danger) {
+    color: getCssVar('button','bg-danger');
+  }
+  @include m_and(text, primary) {
+    color: getCssVar('button','bg-primary');
+  }
+  @include m_and(link, primary) {
+    color: getCssVar('button','bg-primary');
+  }
+  @include m_and(text, success) {
+    color: getCssVar('button','bg-success');
+  }
+  @include m_and(link, success) {
+    color: getCssVar('button','bg-success');
+  }
+  @include m_and(text, warning) {
+    color: getCssVar('button','bg-warning');
+  }
+  @include m_and(link, warning) {
+    color: getCssVar('button','bg-warning');
+  }
+  @include m_and(link, default) {
+    color: getCssVar('button','bg-default');
   }
 }

@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { WlTooltip, WlFlex } from 'whale-ui'
+import { WlTooltip, WlFlex, WlButton } from 'whale-ui'
 </script>
 <template>
   <wl-flex gap="small" align="center">
     <wl-tooltip content="Disabled hover" placement="top" disabled>
-      <button class="px-2 py-1 border border-solid border-indigo-500 rounded">hover disabled</button>
+      <wl-button type="primary" variant="outlined">hover disabled</wl-button>
     </wl-tooltip>
     <wl-tooltip content="Disabled click" placement="top" trigger="click" disabled>
-      <button class="px-2 py-1 border border-solid border-indigo-500 rounded">click disabled</button>
+      <wl-button type="primary" variant="outlined">click disabled</wl-button>
     </wl-tooltip>
   </wl-flex>
 </template>

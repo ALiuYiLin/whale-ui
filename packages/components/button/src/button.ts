@@ -6,25 +6,13 @@ export const buttonProps = buildProps({
     type: String as PropType<'default' | 'primary' | 'success' | 'warning' | 'danger'>,
     default: 'default',
   },
-  plain: {
-    type: Boolean,
-    default: false,
+  variant: {
+    type: String as PropType<ButtonVariant>,
+    default: 'filled'
   },
-  round: {
-    type: Boolean,
-    default: false,
-  },
-  circle: {
-    type: Boolean,
-    default: false,
-  },
-  link: {
-    type: Boolean,
-    default: false,
-  },
-  text: {
-    type: Boolean,
-    default: false,
+  shape: {
+    type: String as PropType<ButtonShape>,
+    default: 'default'
   },
   disabled: {
     type: Boolean,
@@ -49,6 +37,8 @@ export const buttonProps = buildProps({
 } as const)
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>
+export type ButtonVariant = 'outlined' | 'dashed' | 'solid' | 'filled' | 'text' | 'link'
+export type ButtonShape = 'default' | 'circle' | 'round'
 
 export const buttonEmits = {
   click: (evt: MouseEvent) => evt instanceof MouseEvent,

@@ -1,5 +1,6 @@
 # Button 按钮
 
+
 ## 类型
 
 通过 `type` 切换不同语义的样式。
@@ -7,6 +8,18 @@
 :::demo
 button/type
 :::
+
+
+## 基础
+
+通过 `variant` 切换不同语义的样式。
+
+:::demo
+button/base
+:::
+
+
+
 
 ## 尺寸
 
@@ -16,12 +29,6 @@ button/type
 button/size
 :::
 
-
-## 朴素样式（plain）
-
-:::demo
-button/plain
-:::
 
 ## 圆角（round）
 
@@ -35,17 +42,6 @@ button/round
 button/circle
 :::
 
-## 链接样式（link）
-
-:::demo
-button/link
-:::
-
-## 文字样式（text）
-
-:::demo
-button/text
-:::
 
 ## 禁用状态（disabled）
 
@@ -65,11 +61,8 @@ button/loading
 | --- | --- | --- | --- |
 | type | 按钮类型 | `default` \| `primary` \| `success` \| `warning` \| `danger` | `default` |
 | size | 按钮尺寸 | `small` \| `middle` \| `large` | `middle` |
-| plain | 朴素样式（描边） | `boolean` | `false` |
-| round | 圆角按钮 | `boolean` | `false` |
-| circle | 纯圆按钮 | `boolean` | `false` |
-| link | 链接样式 | `boolean` | `false` |
-| text | 文字样式 | `boolean` | `false` |
+| variant | 设置按钮的变体 | `outlined` \| `dashed` \| `solid` \| `filled` \| `text` \| `link` | `filled` |
+| shape | 设置按钮形状 | `default` \| `circle` \| `round` | `default` |
 | disabled | 禁用状态 | `boolean` | `false` |
 | loading | 加载状态 | `boolean` | `false` |
 | native-type | 原生表单类型 | `button` \| `submit` \| `reset` | `button` |
